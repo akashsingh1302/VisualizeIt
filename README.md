@@ -1,0 +1,2 @@
+# VisualizeIt
+The project aims to bring the visualization of different commonly used sorting algorithms like Merge Sort, Quick Sort, Insertion Sort, Selection Sort and Bubble Sort. The viewer can experience the working of these sorting algorithms my managing the array size and speed of the sorting visualization. This will help the viewer to understand how exactly the changes are made while sorting an array.

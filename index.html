@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src = "js/createbars.js"></script>
+        <script src = "js/bubble.js"></script>
+        <script src = "js/merge.js"></script>
+        <script src = "js/quicksort.js"></script>
+        <script src = "js/insertion.js"></script>
+        <script src = "js/selection.js"></script>
+        <script src = "js/timeout.js"></script>
+        <script>
+            function pause(){
+                $( ".barheights" ).stop();
+                document.getElementById("pausebtn").innerHTML = "Start";
+
+            }
+        </script>
+        <link rel = "stylesheet" href = "indexstyle.css">
+        <title>Sorting Visualizer</title>
+    </head>
+    <body onload="addbars()">
+    <h4>Sorting Visualizer</h4>
+    <nav class="navbar navbar-expand-sm bg-dark">
+    <div class="container-fluid">
+    <div class="navbar-nav">
+            <button class="btn btn-outline-success" id="newarr" aria-current="page" href="#" onclick="addbars()">New Array</button>
+            <button class="btn btn-outline-warning" onclick="window.location.reload();" aria-current="page">Reset</button>
+            <span class="navbar-nav" style="padding:5px;margin:0px 20px 0px;color:white;border-left: 2px solid white;"
+             oninput = "addbars()">
+                no of bars
+               <input id="arr_size" type="range"  min=10 max=200 step=1 value=100>
+            </span> 
+
+            <span class="navbar-nav" style="padding:5px;margin:0px 20px 0px;color:white;border-left: 2px solid white;"
+            oninput = "speedset()">
+                speed
+               <input id="speed" type="range"  min=4 max=400 step=1 value=380>
+            </span> 
+            
+            <button class="btn btn-outline-primary" id="bblsort" aria-current="page" onclick="bubble()">Bubble Sort</button>
+
+            <button class="btn btn-outline-primary" id="mrgsort" aria-current="page" onclick="mergeSort()">Merge Sort</button>
+
+            <button class="btn btn-outline-primary" id="qcksort" aria-current="page" onclick="quickSort()">Quick Sort</button>
+
+            <button class="btn btn-outline-primary" id="selctsort" aria-current="page" onclick="selectionSort()">Selection Sort</button>
+
+            <button class="btn btn-outline-primary" id="insertsort" aria-current="page" onclick="insertionSort()">Insertion Sort</button>
+
+    </div>
+    </div>
+    </nav>
+        <div class="main" id="addbar" onload="addbars()" ></div>
+    </body>
+</html>
